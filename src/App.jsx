@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from './App.module.css';
 import './App.css';
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
       <h1>Todos</h1>
       <div>
         <input type="text" value={newTodo.todo} onChange={evt => setNewTodo({...newTodo, ...{todo: evt.target.value}})}/>
-        <button onClick={handleSubmit}>Add</button>
+        <button onClick={handleSubmit} className={styles.button}>Add</button>
       </div>
       {todos.length ? (
         <div>
